@@ -14,7 +14,7 @@ class Edit extends Component {
             setup: true
         };
     }
-    changing = (value) => (event) => {
+    switch = (value) => (event) => {
         if (value === 'name') {
             this.setState({
                 name: event.target.value
@@ -47,8 +47,8 @@ class Edit extends Component {
                 <Link to='/'>Home</Link>
                 {user && (
                     <div>
-                        <input onChange={this.changing('name')} value={this.state.name}></input>
-                        <input onChange={this.changing('mail')} value={this.state.mail}></input>
+                        <input onChange={this.switch('name')} value={this.state.name}></input>
+                        <input onChange={this.switch('mail')} value={this.state.mail}></input>
                         <button onClick={this.submit}>Submit</button>
                     </div>
                 )}

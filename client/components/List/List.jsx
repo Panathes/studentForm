@@ -12,7 +12,6 @@ class List extends Component {
             name: '',
             mail: ''
         };
-        // this.redirectToUser = this.redirectToUser.bind(this)
     }
     delete = (id, e) => {
         e.preventDefault();

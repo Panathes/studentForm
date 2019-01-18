@@ -11,7 +11,7 @@ class Form extends Component {
         };
         this.handleChange = this.handleChange.bind(this);
     }
-    addGuyBtn = () => {
+    add = () => {
         if (this.state.name === '') {
             console.error('no name given, user wasn\'t register');
         }
@@ -34,8 +34,8 @@ class Form extends Component {
                 <label className="form_label_name" htmlFor="name">Name</label>
                 <input onChange={this.handleChange} name="name" id="name" type="text" value={this.state.name}></input>
                 <label className="form_label_name" htmlFor="mail">Mail</label>
-                <input onChange={this.handleChange} name="mail" id="mail" type="text" value={this.state.mail}></input>
-                <button onClick={this.addGuyBtn}>Just do it !</button>
+                <input onChange={this.handleChange} name="mail" id="mail" type="email" value={this.state.mail}></input>
+                <button onClick={this.add}>Just do it !</button>
             </div>
         );
     }
